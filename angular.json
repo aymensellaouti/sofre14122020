@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "sofrecom14122020"
+    }
+  },
+  "defaultProject": "sofrecom14122020",
+  "cli": {
+    "analytics": false
+  }
 }
