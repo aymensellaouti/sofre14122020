@@ -7,8 +7,7 @@ import { Component, OnInit } from '@angular/core';
       second works!
     </p>
   `,
-  styles: [
-  ]
+  styles: []
 })
 export class SecondComponent implements OnInit {
 
