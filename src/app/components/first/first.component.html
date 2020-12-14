@@ -1,0 +1,10 @@
+<p [hidden]="isHidden">first works!</p>
+<p [style.color]="color">Bonjour {{ name }}</p>
+
+<button (click)="showHide(monInput.value)" class="btn btn-primary">
+  {{ buttonText }}
+</button>
+
+<input type="text" #monInput />
+
+<app-second></app-second>
