@@ -8,6 +8,8 @@ import { Personne } from '../model/personne';
 })
 export class ListComponent implements OnInit {
   personnes: Personne[] = [];
+  /* names = ['chouaib', 'aymen'];
+  test = ['version1', '12345', 'version2', '456789']; */
   @Output() forwardPersonneEvent = new EventEmitter();
   constructor() {}
 
@@ -21,8 +23,9 @@ export class ListComponent implements OnInit {
         20,
         22222,
         'Ingénieur',
-        'rotating_card_profile.png'
+        '             '
       ),
+      new Personne(3, 'Khaoula', 'aboud', 20, 22222, 'Ingénieur', ''),
     ];
   }
   forwardPersonne(personne: Personne) {
