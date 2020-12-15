@@ -16,6 +16,10 @@ import { CvComponent } from './cv/cv/cv.component';
 import { ListComponent } from './cv/list/list.component';
 import { ItemComponent } from './cv/item/item.component';
 import { CardComponent } from './cv/card/card.component';
+import { TestNgStyleComponent } from './directives/test-ng-style/test-ng-style.component';
+import { WordComponent } from './directives/word/word.component';
+import { TestNgClassComponent } from './directives/test-ng-class/test-ng-class.component';
+import { HighlightDirective } from './directives/highlight.directive';
 
 @NgModule({
   declarations: [
@@ -31,6 +35,10 @@ import { CardComponent } from './cv/card/card.component';
     ListComponent,
     ItemComponent,
     CardComponent,
+    TestNgStyleComponent,
+    WordComponent,
+    TestNgClassComponent,
+    HighlightDirective,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule],
   providers: [],
