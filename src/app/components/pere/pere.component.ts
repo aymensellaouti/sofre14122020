@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./pere.component.css'],
 })
 export class PereComponent implements OnInit {
-  pereVar = 'cc';
+  pereVar = 'pere var';
   constructor() {}
 
   ngOnInit(): void {}

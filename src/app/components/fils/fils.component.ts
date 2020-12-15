@@ -8,9 +8,13 @@ import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 export class FilsComponent implements OnInit {
   @Input() message = 'je suis le message du fils';
   @Output() sendDataToDad = new EventEmitter();
-  constructor() {}
+  constructor() {
+    console.log('message in constructor', this.message);
+  }
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    console.log('message in onInit', this.message);
+  }
 
   /*
     1 créer un event
