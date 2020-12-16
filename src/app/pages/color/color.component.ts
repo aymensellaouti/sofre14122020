@@ -21,6 +21,9 @@ export class ColorComponent implements OnInit, OnDestroy, DoCheck {
     this.activatedRoute.params.subscribe(
       (mesParams) => this.color = mesParams.couleur
     );
+    this.activatedRoute.queryParams.subscribe(
+      (qp) => console.log(qp)
+    )
   }
   ngOnDestroy() {
     console.log('destroy');
