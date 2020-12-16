@@ -28,6 +28,7 @@ import { EuroDollarPipe } from './pipes/euro-dollar.pipe';
 import { DefaultImagePipe } from './pipes/default-image.pipe';
 import { LoggerService } from './services/logger.service';
 import { TodoComponent } from './todo/todo.component';
+import { EmbaucheComponent } from './cv/embauche/embauche.component';
 
 @NgModule({
   declarations: [
@@ -51,6 +52,7 @@ import { TodoComponent } from './todo/todo.component';
     EuroDollarPipe,
     DefaultImagePipe,
     TodoComponent,
+    EmbaucheComponent,
   ],
   imports: [
     BrowserModule,
