@@ -1,0 +1,7 @@
+input.ng-invalid.ng-dirty {
+  border: 2px red solid;
+}
+
+input.ng-valid.ng-dirty {
+  border: 2px lightgreen solid;
+}

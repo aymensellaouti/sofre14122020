@@ -11,6 +11,7 @@ import { ColorComponent } from './pages/color/color.component';
 import { TodoComponent } from './todo/todo.component';
 import { SecondComponent } from './components/second/second.component';
 import { NF404Component } from './components/nf404/nf404.component';
+import { LoginComponent } from './pages/login/login.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'cv', pathMatch: 'full' },
@@ -18,6 +19,7 @@ const routes: Routes = [
     path: '',
     component: FrontComponent,
     children: [
+      { path: 'login', component: LoginComponent },
       {
         path: 'cv',
         children: [
