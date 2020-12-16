@@ -30,6 +30,7 @@ import { LoggerService } from './services/logger.service';
 import { TodoComponent } from './todo/todo.component';
 import { EmbaucheComponent } from './cv/embauche/embauche.component';
 import { HeaderComponent } from './components/header/header.component';
+import { RouterSimulatorComponent } from './components/router-simulator/router-simulator.component';
 
 @NgModule({
   declarations: [
@@ -55,6 +56,7 @@ import { HeaderComponent } from './components/header/header.component';
     TodoComponent,
     EmbaucheComponent,
     HeaderComponent,
+    RouterSimulatorComponent,
   ],
   imports: [
     BrowserModule,

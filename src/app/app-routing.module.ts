@@ -4,11 +4,11 @@ import { CvComponent } from './cv/cv/cv.component';
 import { WordComponent } from './directives/word/word.component';
 import { ColorComponent } from './pages/color/color.component';
 import { TodoComponent } from './todo/todo.component';
-
+// /cv
 const routes: Routes = [
   { path: 'cv', component: CvComponent },
   { path: 'todo', component: TodoComponent },
-  { path: 'color', component: ColorComponent },
+  { path: 'color/:couleur/:name', component: ColorComponent },
   { path: 'word', component: WordComponent },
 ];
 
