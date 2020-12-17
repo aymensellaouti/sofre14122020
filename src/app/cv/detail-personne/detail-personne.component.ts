@@ -20,11 +20,13 @@ export class DetailPersonneComponent implements OnInit {
 
   ngOnInit(): void {
     this.activatedRoute.params.subscribe((params) => {
-      this.personne = this.cvService.findPersonneById(+params.id);
-      if (!this.personne) {
-        this.toastr.error(`la personne d'id ${params.id} n'existe pas`);
-        this.router.navigate(['cv']);
-      }
+      this.cvService.findPersonneById(+params.id).subscribe(
+        (personne) => this.personne = personne,
+        (erreur) => {
+          this.toastr.error(`la personne d'id ${params.id} n'existe pas`);
+          this.router.navigate(['cv']);
+        }
+      );
     });
   }
   deletePersonne() {
