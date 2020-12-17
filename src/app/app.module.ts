@@ -39,6 +39,7 @@ import { NF404Component } from './components/nf404/nf404.component';
 import { TestFormComponent } from './components/test-form/test-form.component';
 import { LoginComponent } from './pages/login/login.component';
 import { TestReactiveFormComponent } from './components/test-reactive-form/test-reactive-form.component';
+import { TestObservableComponent } from './components/test-observable/test-observable.component';
 
 @NgModule({
   declarations: [
@@ -73,6 +74,7 @@ import { TestReactiveFormComponent } from './components/test-reactive-form/test-
     TestFormComponent,
     LoginComponent,
     TestReactiveFormComponent,
+    TestObservableComponent,
   ],
   imports: [
     BrowserModule,
