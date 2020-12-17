@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { Subject } from 'rxjs';
 import { Personne } from '../model/personne';
 
 @Injectable({
@@ -6,6 +7,7 @@ import { Personne } from '../model/personne';
 })
 export class CvService {
   private personnes: Personne[] = [];
+  public clickItemSubject = new Subject<Personne>();
   constructor() {
     this.personnes = [
       new Personne(1, 'aymen', 'sellaouti', 38, 14258, 'Teacher', 'as.jpg'),
@@ -21,7 +23,9 @@ export class CvService {
       new Personne(3, 'Khaoula', 'aboud', 20, 22222, 'Ingénieur', ''),
     ];
   }
-
+  selectPersonne(personne: Personne) {
+    this.clickItemSubject.next(personne);
+  }
   getPersonnes(): Personne[] {
     return this.personnes;
   }

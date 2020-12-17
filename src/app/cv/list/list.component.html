@@ -7,10 +7,7 @@
       'list-group-item-warning': !isOdd
     }"
   >
-    <app-item
-      (selectPersonneEvent)="forwardPersonne($event)"
-      [personne]="personne"
-    ></app-item>
+    <app-item [personne]="personne"></app-item>
     <!--     <p>
       {{ personne.age }} après conversion :
       {{ personne.age | euroDollar: isOdd | currency: "EUR" }}

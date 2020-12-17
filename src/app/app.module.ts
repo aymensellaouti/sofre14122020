@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
@@ -40,6 +41,7 @@ import { TestFormComponent } from './components/test-form/test-form.component';
 import { LoginComponent } from './pages/login/login.component';
 import { TestReactiveFormComponent } from './components/test-reactive-form/test-reactive-form.component';
 import { TestObservableComponent } from './components/test-observable/test-observable.component';
+import { TestHttpComponent } from './components/test-http/test-http.component';
 
 @NgModule({
   declarations: [
@@ -75,6 +77,7 @@ import { TestObservableComponent } from './components/test-observable/test-obser
     LoginComponent,
     TestReactiveFormComponent,
     TestObservableComponent,
+    TestHttpComponent,
   ],
   imports: [
     BrowserModule,
@@ -82,7 +85,8 @@ import { TestObservableComponent } from './components/test-observable/test-obser
     FormsModule,
     BrowserAnimationsModule, // required animations module
     ToastrModule.forRoot(), // ToastrModule added
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
