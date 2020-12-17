@@ -1,4 +1,4 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable, Subject } from 'rxjs';
 import { Personne } from '../model/personne';
@@ -43,13 +43,11 @@ export class CvService {
     return this.http.get<Personne>(API_PERSONNE_LINK + id);
   }
 
-  deletePersonne(personne: Personne): boolean {
-    const index = this.personnes.indexOf(personne);
-    if (index > -1) {
-      this.personnes.splice(index, 1);
-      return true;
-    }
-    return false;
+  deletePersonne(id: number): Observable<any> {
+    const token = localStorage.getItem('token');
+    /* const params = new HttpParams().set('access_token', token); */
+    const headers = new HttpHeaders().set('Authorization', token);
+    return this.http.delete<any>(API_PERSONNE_LINK + id, { headers });
   }
 
   addPersonne(personne: Personne) {

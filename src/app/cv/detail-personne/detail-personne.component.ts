@@ -21,7 +21,7 @@ export class DetailPersonneComponent implements OnInit {
   ngOnInit(): void {
     this.activatedRoute.params.subscribe((params) => {
       this.cvService.findPersonneById(+params.id).subscribe(
-        (personne) => this.personne = personne,
+        (personne) => (this.personne = personne),
         (erreur) => {
           this.toastr.error(`la personne d'id ${params.id} n'existe pas`);
           this.router.navigate(['cv']);
@@ -30,8 +30,14 @@ export class DetailPersonneComponent implements OnInit {
     });
   }
   deletePersonne() {
-    this.toastr.success(`${this.personne.name} supprimé avec succès`);
-    this.cvService.deletePersonne(this.personne);
-    this.router.navigate(['cv']);
+    this.cvService.deletePersonne(this.personne.id).subscribe(
+      (data) => {
+        this.toastr.success(`${this.personne.name} supprimé avec succès`);
+        this.router.navigate(['cv']);
+      },
+      (erreur) => {
+        this.toastr.error(`Problème de suppression veuillez consulter l'admin`);
+      }
+    );
   }
 }
