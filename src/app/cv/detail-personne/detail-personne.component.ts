@@ -3,6 +3,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { Personne } from '../model/personne';
 import { CvService } from './../services/cv.service';
 import { ToastrService } from 'ngx-toastr';
+import { AuthService } from 'src/app/auth/services/auth.service';
 
 @Component({
   selector: 'app-detail-personne',
@@ -15,7 +16,8 @@ export class DetailPersonneComponent implements OnInit {
     private activatedRoute: ActivatedRoute,
     private cvService: CvService,
     private router: Router,
-    private toastr: ToastrService
+    private toastr: ToastrService,
+    public authService: AuthService
   ) {}
 
   ngOnInit(): void {

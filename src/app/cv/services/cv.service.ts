@@ -44,14 +44,13 @@ export class CvService {
   }
 
   deletePersonne(id: number): Observable<any> {
-    const token = localStorage.getItem('token');
-    /* const params = new HttpParams().set('access_token', token); */
-    const headers = new HttpHeaders().set('Authorization', token);
-    return this.http.delete<any>(API_PERSONNE_LINK + id, { headers });
+    /*     const token = localStorage.getItem('token');
+     */ /* const params = new HttpParams().set('access_token', token); */
+    /*     const headers = new HttpHeaders().set('Authorization', token);
+     */ return this.http.delete<any>(API_PERSONNE_LINK + id);
   }
 
-  addPersonne(personne: Personne) {
-    personne.id = this.personnes[this.personnes.length - 1].id + 1;
-    this.personnes.push(personne);
+  addPersonne(personne: Personne): Observable<Personne> {
+    return this.http.post<Personne>(API_PERSONNE_LINK, personne);
   }
 }

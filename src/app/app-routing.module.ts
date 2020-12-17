@@ -12,6 +12,7 @@ import { TodoComponent } from './todo/todo.component';
 import { SecondComponent } from './components/second/second.component';
 import { NF404Component } from './components/nf404/nf404.component';
 import { LoginComponent } from './pages/login/login.component';
+import { AuthGuardGuard } from './guards/auth-guard.guard';
 
 const routes: Routes = [
   { path: '', redirectTo: 'cv', pathMatch: 'full' },
@@ -24,7 +25,7 @@ const routes: Routes = [
         path: 'cv',
         children: [
           { path: '', component: CvComponent },
-          { path: 'add', component: AddPersonneComponent },
+          { path: 'add', component: AddPersonneComponent, canActivate: [AuthGuardGuard] },
           { path: ':id', component: DetailPersonneComponent },
         ],
       },
