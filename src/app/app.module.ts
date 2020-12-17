@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { ToastrModule } from 'ngx-toastr';
@@ -38,6 +38,7 @@ import { FrontComponent } from './components/front/front.component';
 import { NF404Component } from './components/nf404/nf404.component';
 import { TestFormComponent } from './components/test-form/test-form.component';
 import { LoginComponent } from './pages/login/login.component';
+import { TestReactiveFormComponent } from './components/test-reactive-form/test-reactive-form.component';
 
 @NgModule({
   declarations: [
@@ -71,6 +72,7 @@ import { LoginComponent } from './pages/login/login.component';
     NF404Component,
     TestFormComponent,
     LoginComponent,
+    TestReactiveFormComponent,
   ],
   imports: [
     BrowserModule,
@@ -78,6 +80,7 @@ import { LoginComponent } from './pages/login/login.component';
     FormsModule,
     BrowserAnimationsModule, // required animations module
     ToastrModule.forRoot(), // ToastrModule added
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent],

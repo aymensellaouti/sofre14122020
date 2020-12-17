@@ -1,0 +1,15 @@
+<p>test-reactive-form works!</p>
+
+<form [formGroup]="profileGroupForm">
+  <label>
+    First Name:
+    <input type="text" formControlName="firstname" />
+  </label>
+
+  <label>
+    Last Name:
+    <input type="text" formControlName="name" />
+  </label>
+</form>
+
+<button (click)="processForm()" class="btn btn-primary">show Form</button>
